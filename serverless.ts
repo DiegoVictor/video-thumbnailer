@@ -17,6 +17,7 @@ const serverlessConfiguration: AWS = {
     },
   },
   functions: {
+  },
   package: { individually: true },
   custom: {
     esbuild: {
@@ -29,6 +30,9 @@ const serverlessConfiguration: AWS = {
       platform: 'node',
       concurrency: 10,
     },
+    bucketName: 'video-thumbnailer-${sls:stage}',
+    containerName: 'video-thumbnailer',
+  },
   },
 };
 
