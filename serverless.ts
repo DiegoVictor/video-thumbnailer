@@ -1,5 +1,6 @@
 import type { AWS } from '@serverless/typescript';
 
+import signedUrl from '@functions/signedURL';
 const serverlessConfiguration: AWS = {
   service: 'video-thumbnailer',
   frameworkVersion: '3',
@@ -17,6 +18,7 @@ const serverlessConfiguration: AWS = {
     },
   },
   functions: {
+    signedUrl,
   },
   package: { individually: true },
   custom: {
