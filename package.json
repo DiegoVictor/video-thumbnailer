@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "serverless.ts",
   "license": "MIT",
+  "scripts": {
+    "test": "jest --runInBand"
+  },
   "engines": {
     "node": ">=14.15.0"
   },
