@@ -51,6 +51,15 @@ const serverlessConfiguration: AWS = {
     bucketName: 'video-thumbnailer-${sls:stage}',
     containerName: 'video-thumbnailer',
   },
+  resources: {
+    Resources: {
+      VideoThumbnailerBucket: {
+        Type: 'AWS::S3::Bucket',
+        Properties: {
+          BucketName: '${self:custom.bucketName}',
+        },
+      },
+    },
   },
 };
 
