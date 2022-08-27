@@ -59,6 +59,15 @@ const serverlessConfiguration: AWS = {
           BucketName: '${self:custom.bucketName}',
         },
       },
+      VideoThumbnailerRepository: {
+        Type: 'AWS::ECR::Repository',
+        Properties: {
+          RepositoryName: 'video-thumbnailer',
+          ImageScanningConfiguration: {
+            ScanOnPush: true,
+          },
+        },
+      },
     },
   },
 };
