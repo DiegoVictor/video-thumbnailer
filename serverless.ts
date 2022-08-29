@@ -130,6 +130,45 @@ const serverlessConfiguration: AWS = {
           ],
         },
       },
+      VideoThumbnailerTaskDefinition: {
+        Type: 'AWS::ECS::TaskDefinition',
+        Properties: {
+          Cpu: '256',
+          Memory: '512',
+          NetworkMode: 'awsvpc',
+          ExecutionRoleArn: {
+            'Fn::GetAtt': ['VideoThumbnailerContainerRole', 'Arn'],
+          },
+          TaskRoleArn: {
+            'Fn::GetAtt': ['VideoThumbnailerContainerRole', 'Arn'],
+          },
+          RequiresCompatibilities: ['FARGATE'],
+          ContainerDefinitions: [
+            {
+              Name: '${self:custom.containerName}',
+              Image:
+                '${aws:accountId}.dkr.ecr.${opt:region, self:provider.region, "us-east-1"}.amazonaws.com/video-thumbnailer',
+              Essential: true,
+              Environment: [
+                {
+                  Name: 'BUCKET_NAME',
+                  Value: '${self:custom.bucketName}',
+                },
+              ],
+              LogConfiguration: {
+                LogDriver: 'awslogs',
+                Options: {
+                  'awslogs-create-group': true,
+                  'awslogs-group': 'video-thumbnailer-container',
+                  'awslogs-region':
+                    '${opt:region, self:provider.region, "us-east-1"}',
+                  'awslogs-stream-prefix': 'video-thumbnailer',
+                },
+              },
+            },
+          ],
+        },
+      },
     },
   },
 };
