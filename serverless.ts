@@ -29,6 +29,18 @@ const serverlessConfiguration: AWS = {
               ],
             },
           },
+          {
+            Effect: 'Allow',
+            Action: ['ecs:RunTask'],
+            Resource: '*',
+          },
+          {
+            Effect: 'Allow',
+            Action: ['iam:PassRole'],
+            Resource: {
+              'Fn::GetAtt': ['VideoThumbnailerContainerRole', 'Arn'],
+            },
+          },
         ],
       },
     },
