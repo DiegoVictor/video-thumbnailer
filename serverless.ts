@@ -80,6 +80,13 @@ const serverlessConfiguration: AWS = {
           },
         },
       },
+      VideoThumbnailerECSCluster: {
+        Type: 'AWS::ECS::Cluster',
+        Properties: {
+          ClusterName: 'VideoThumbnailer',
+          CapacityProviders: ['FARGATE', 'FARGATE_SPOT'],
+        },
+      },
     },
   },
 };
