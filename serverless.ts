@@ -87,6 +87,49 @@ const serverlessConfiguration: AWS = {
           CapacityProviders: ['FARGATE', 'FARGATE_SPOT'],
         },
       },
+      VideoThumbnailerContainerRole: {
+        Type: 'AWS::IAM::Role',
+        Properties: {
+          AssumeRolePolicyDocument: {
+            Version: '2012-10-17',
+            Statement: [
+              {
+                Sid: '',
+                Effect: 'Allow',
+                Principal: {
+                  Service: 'ecs-tasks.amazonaws.com',
+                },
+                Action: 'sts:AssumeRole',
+              },
+            ],
+          },
+          Policies: [
+            {
+              PolicyName: 'VideoThumbnailerPermissions',
+              PolicyDocument: {
+                Version: '2012-10-17',
+                Statement: [
+                  {
+                    Effect: 'Allow',
+                    Action: [
+                      'ecr:GetAuthorizationToken',
+                      'ecr:BatchCheckLayerAvailability',
+                      'ecr:GetDownloadUrlForLayer',
+                      'ecr:BatchGetImage',
+                      'logs:CreateLogStream',
+                      'logs:PutLogEvents',
+                      'logs:CreateLogGroup',
+                      's3:GetObject',
+                      's3:PutObject',
+                    ],
+                    Resource: '*',
+                  },
+                ],
+              },
+            },
+          ],
+        },
+      },
     },
   },
 };
