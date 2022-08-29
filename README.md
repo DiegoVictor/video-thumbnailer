@@ -8,3 +8,15 @@
 This application trigger a container with ffmpeg to generate thumbnails when a video is uploaded into a S3 Bucket folder.
 
 ![Infrastructure Diagram]()
+
+## Table of Contents
+* [Requirements](#requirements)
+# Requirements
+* Node.js ^14.15.0
+* Serveless Framework
+* AWS Account
+  * [S3](https://aws.amazon.com/s3/)
+  * [Lambda](https://aws.amazon.com/lambda)
+  * [API Gateway](https://aws.amazon.com/api-gateway/)
+  * [Elastic Container Registry](https://aws.amazon.com/pt/ecr/)
+  * [Fargate](https://aws.amazon.com/pt/fargate/)
