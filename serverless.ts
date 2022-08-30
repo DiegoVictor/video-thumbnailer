@@ -222,6 +222,20 @@ const serverlessConfiguration: AWS = {
           },
         },
       },
+      VideoThumbnailerRoute: {
+        Type: 'AWS::EC2::Route',
+        DependsOn: ['VideoThumbnailerInternetGateway'],
+        Properties: {
+          RouteTableId: { Ref: 'VideoThumbnailerRouteTable' },
+          DestinationCidrBlock: '0.0.0.0/0',
+          GatewayId: {
+            'Fn::GetAtt': [
+              'VideoThumbnailerInternetGateway',
+              'InternetGatewayId',
+            ],
+          },
+        },
+      },
     },
   },
 };
