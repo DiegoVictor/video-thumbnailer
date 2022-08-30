@@ -169,6 +169,34 @@ const serverlessConfiguration: AWS = {
           ],
         },
       },
+      VideoThumbnailerVpc: {
+        Type: 'AWS::EC2::VPC',
+        Properties: {
+          CidrBlock: '10.0.0.0/16',
+          EnableDnsHostnames: true,
+          EnableDnsSupport: true,
+        },
+      },
+      VideoThumbnailerSubnet1: {
+        Type: 'AWS::EC2::Subnet',
+        Properties: {
+          CidrBlock: '10.0.0.0/24',
+          AvailabilityZone: 'us-east-1a',
+          VpcId: {
+            Ref: 'VideoThumbnailerVpc',
+          },
+        },
+      },
+      VideoThumbnailerSubnet2: {
+        Type: 'AWS::EC2::Subnet',
+        Properties: {
+          CidrBlock: '10.0.1.0/24',
+          AvailabilityZone: 'us-east-1b',
+          VpcId: {
+            Ref: 'VideoThumbnailerVpc',
+          },
+        },
+      },
     },
   },
 };
