@@ -200,6 +200,20 @@ const serverlessConfiguration: AWS = {
       VideoThumbnailerInternetGateway: {
         Type: 'AWS::EC2::InternetGateway',
       },
+      VideoThumbnailerGatewayAttachment: {
+        Type: 'AWS::EC2::VPCGatewayAttachment',
+        Properties: {
+          InternetGatewayId: {
+            'Fn::GetAtt': [
+              'VideoThumbnailerInternetGateway',
+              'InternetGatewayId',
+            ],
+          },
+          VpcId: {
+            Ref: 'VideoThumbnailerVpc',
+          },
+        },
+      },
     },
   },
 };
