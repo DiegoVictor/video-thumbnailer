@@ -214,6 +214,14 @@ const serverlessConfiguration: AWS = {
           },
         },
       },
+      VideoThumbnailerRouteTable: {
+        Type: 'AWS::EC2::RouteTable',
+        Properties: {
+          VpcId: {
+            Ref: 'VideoThumbnailerVpc',
+          },
+        },
+      },
     },
   },
 };
