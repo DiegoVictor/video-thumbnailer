@@ -11,6 +11,7 @@ This application trigger a container with ffmpeg to generate thumbnails when a v
 
 ## Table of Contents
 * [Requirements](#requirements)
+* [Install](#install)
 # Requirements
 * Node.js ^14.15.0
 * Serveless Framework
@@ -20,3 +21,14 @@ This application trigger a container with ffmpeg to generate thumbnails when a v
   * [API Gateway](https://aws.amazon.com/api-gateway/)
   * [Elastic Container Registry](https://aws.amazon.com/pt/ecr/)
   * [Fargate](https://aws.amazon.com/pt/fargate/)
+
+# Install
+```
+npm install
+```
+Or simple:
+```
+yarn
+```
+> Was installed and configured the [`eslint`](https://eslint.org/) and [`prettier`](https://prettier.io/) to keep the code clean and patterned.
+
