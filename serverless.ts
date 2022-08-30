@@ -236,6 +236,20 @@ const serverlessConfiguration: AWS = {
           },
         },
       },
+      VideoThumbnailerSubnetTableAssociation1: {
+        Type: 'AWS::EC2::SubnetRouteTableAssociation',
+        Properties: {
+          RouteTableId: { Ref: 'VideoThumbnailerRouteTable' },
+          SubnetId: { Ref: 'VideoThumbnailerSubnet1' },
+        },
+      },
+      VideoThumbnailerSubnetTableAssociation2: {
+        Type: 'AWS::EC2::SubnetRouteTableAssociation',
+        Properties: {
+          RouteTableId: { Ref: 'VideoThumbnailerRouteTable' },
+          SubnetId: { Ref: 'VideoThumbnailerSubnet2' },
+        },
+      },
     },
   },
 };
