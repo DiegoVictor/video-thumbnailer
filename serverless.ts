@@ -197,6 +197,9 @@ const serverlessConfiguration: AWS = {
           },
         },
       },
+      VideoThumbnailerInternetGateway: {
+        Type: 'AWS::EC2::InternetGateway',
+      },
     },
   },
 };
