@@ -1,6 +1,8 @@
 import type { AWS } from '@serverless/typescript';
 
 import signedUrl from '@functions/signedURL';
+import runTask from '@functions/runTask';
+
 const serverlessConfiguration: AWS = {
   service: 'video-thumbnailer',
   frameworkVersion: '3',
@@ -47,6 +49,7 @@ const serverlessConfiguration: AWS = {
   },
   functions: {
     signedUrl,
+    runTask,
   },
   package: { individually: true },
   custom: {
