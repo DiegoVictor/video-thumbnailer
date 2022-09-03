@@ -17,6 +17,7 @@ This application trigger a container with ffmpeg to generate thumbnails when a v
 ## Table of Contents
 * [Requirements](#requirements)
 * [Install](#install)
+* [Running the tests](#running-the-tests)
 # Requirements
 * Node.js ^14.15.0
 * Serveless Framework
@@ -36,4 +37,15 @@ Or simple:
 yarn
 ```
 > Was installed and configured the [`eslint`](https://eslint.org/) and [`prettier`](https://prettier.io/) to keep the code clean and patterned.
+
+# Running the tests
+[Jest](https://jestjs.io/) was the choice to test the app, to run:
+```
+$ yarn test
+```
+Or:
+```
+$ npm run test
+```
+> Run the command in the root folder
 
