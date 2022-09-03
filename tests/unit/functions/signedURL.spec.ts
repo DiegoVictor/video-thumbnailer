@@ -59,7 +59,7 @@ describe('signedUrl', () => {
     expect(response).toStrictEqual({
       statusCode: 200,
       body: JSON.stringify({
-        presigned_url: url,
+        signedUrl: url,
       }),
     });
   });
