@@ -18,6 +18,8 @@ This application trigger a container with ffmpeg to generate thumbnails when a v
 * [Requirements](#requirements)
 * [Install](#install)
 * [Running the tests](#running-the-tests)
+  * [Coverage report](#coverage-report)
+
 # Requirements
 * Node.js ^14.15.0
 * Serveless Framework
@@ -49,3 +51,5 @@ $ npm run test
 ```
 > Run the command in the root folder
 
+## Coverage report
+You can see the coverage report inside `tests/coverage`. They are automatically created after the tests run.
