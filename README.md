@@ -17,6 +17,7 @@ This application trigger a container with ffmpeg to generate thumbnails when a v
 ## Table of Contents
 * [Requirements](#requirements)
 * [Install](#install)
+* [Usage](#usage)
 * [Running the tests](#running-the-tests)
   * [Coverage report](#coverage-report)
 
@@ -39,6 +40,17 @@ Or simple:
 yarn
 ```
 > Was installed and configured the [`eslint`](https://eslint.org/) and [`prettier`](https://prettier.io/) to keep the code clean and patterned.
+
+# Usage
+After deploy the application use the outputed Lambda URL to request a signed URL to upload a video file:
+```
+GET /signedURL
+```
+Then use the `signedUrl` to upload the video file:
+```
+PUT <signed URL>
+```
+Once the upload finish S3 will trigger a Lambda that will fire a container to generate the video thumbnails file, all you need to do is wait the generated file be uploaded in the same S3 Bucket in a folder called `preview`.
 
 # Running the tests
 [Jest](https://jestjs.io/) was the choice to test the app, to run:
