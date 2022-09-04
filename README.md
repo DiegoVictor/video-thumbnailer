@@ -17,6 +17,10 @@ This application trigger a container with ffmpeg to generate thumbnails when a v
 ## Table of Contents
 * [Requirements](#requirements)
 * [Install](#install)
+  * [Deploy](#configure)
+    * [Container](#container)
+      * [Useful Links](useful-links)
+  * [Teardown](#teardown)
 * [Usage](#usage)
 * [Running the tests](#running-the-tests)
   * [Coverage report](#coverage-report)
@@ -40,6 +44,48 @@ Or simple:
 yarn
 ```
 > Was installed and configured the [`eslint`](https://eslint.org/) and [`prettier`](https://prettier.io/) to keep the code clean and patterned.
+
+## Deploy
+Deploy the application:
+```
+$ sls deploy
+```
+Now push the container image:
+```
+$ cd scripts
+$ ./deploy-container.sh
+```
+
+The script will:
+
+1. Build the container image.
+2. Get authentication credentials in the ECR service.
+3. Push the container to the ECR repository created during the deploy.
+
+### Container
+This container make usage of the [aws cli](https://aws.amazon.com/cli) to download the mp4 video file uploaded in the S3 Bucket, makes some calculations, then it uses [ffmpeg](https://ffmpeg.org/) binary to capture a thumbnail at each 1 second of video and save them into a single file.
+> Refer to the `docker/main.sh` script.
+
+![Output]()
+
+Once the thumbnails file is generate it is uploaded into S3 Bucket.
+
+#### Useful Links
+* https://trac.ffmpeg.org/wiki/FilteringGuide
+* http://ffmpeg.org/ffmpeg-filters.html#streamselect_002c-astreamselect
+
+## Teardown
+To completly remove the resources from AWS, follow these steps:
+1. Run the teardown script:
+```
+$ cd scripts
+$ ./teardown.sh
+```
+2. Then remove the stack:
+```
+$ sls remove
+```
+That is all.
 
 # Usage
 After deploy the application use the outputed Lambda URL to request a signed URL to upload a video file:
