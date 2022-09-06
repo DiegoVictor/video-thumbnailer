@@ -12,7 +12,7 @@
 
 This application trigger a container with ffmpeg to generate thumbnails when a video is uploaded into a S3 Bucket folder.
 
-![Infrastructure Diagram]()
+![Infrastructure Diagram](https://raw.githubusercontent.com/DiegoVictor/video-thumbnailer/main/VideoThumbnailer.drawio.png)
 
 ## Table of Contents
 * [Requirements](#requirements)
