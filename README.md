@@ -14,7 +14,7 @@ This application trigger a container with ffmpeg to generate thumbnails when a v
 
 <img src="https://raw.githubusercontent.com/DiegoVictor/video-thumbnailer/main/output.jpg" width="50%" alt="Example" />
 
-### Infrastructure Diagram:
+#### Infrastructure Diagram:
 
 ![Infrastructure Diagram](https://raw.githubusercontent.com/DiegoVictor/video-thumbnailer/main/VideoThumbnailer.drawio.png)
 
