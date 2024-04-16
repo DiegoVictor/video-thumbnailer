@@ -1,10 +1,10 @@
 # Video Thumbnailer
 [![CircleCI](https://img.shields.io/circleci/build/github/DiegoVictor/video-thumbnailer?style=flat-square&logo=circleci)](https://app.circleci.com/pipelines/github/DiegoVictor/video-thumbnailer?branch=main)
-[![serverless](https://img.shields.io/badge/serverless-3.15.2-FD5750?style=flat-square&logo=serverless)](https://www.serverless.com/)
-[![eslint](https://img.shields.io/badge/eslint-8.20.0-4b32c3?style=flat-square&logo=eslint)](https://eslint.org/)
+[![serverless](https://img.shields.io/badge/serverless-3.38.0-FD5750?style=flat-square&logo=serverless)](https://www.serverless.com/)
+[![eslint](https://img.shields.io/badge/eslint-8.57.0-4b32c3?style=flat-square&logo=eslint)](https://eslint.org/)
 [![airbnb-style](https://flat.badgen.net/badge/style-guide/airbnb/ff5a5f?icon=airbnb)](https://github.com/airbnb/javascript)
-[![jest](https://img.shields.io/badge/jest-28.1.3-brightgreen?style=flat-square&logo=jest)](https://jestjs.io/)
-[![typescript](https://img.shields.io/badge/typescript-4.7.4-3178c6?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
+[![jest](https://img.shields.io/badge/jest-29.7.0-brightgreen?style=flat-square&logo=jest)](https://jestjs.io/)
+[![typescript](https://img.shields.io/badge/typescript-5.4.5-3178c6?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
 [![coverage](https://img.shields.io/codecov/c/gh/DiegoVictor/video-thumbnailer?logo=codecov&style=flat-square)](https://codecov.io/gh/DiegoVictor/video-thumbnailer)
 [![MIT License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://raw.githubusercontent.com/DiegoVictor/video-thumbnailer/main/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)<br>
