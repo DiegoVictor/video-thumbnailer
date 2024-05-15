@@ -21,7 +21,7 @@ This application trigger a container with ffmpeg to generate thumbnails when a v
 ## Table of Contents
 * [Requirements](#requirements)
 * [Install](#install)
-  * [Deploy](#configure)
+  * [Deploy](#deploy)
     * [Container](#container)
       * [Useful Links](useful-links)
   * [Teardown](#teardown)
