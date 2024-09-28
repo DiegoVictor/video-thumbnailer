@@ -43,7 +43,7 @@ This application trigger a container with ffmpeg to generate thumbnails when a v
 ```
 npm install
 ```
-Or simple:
+Or simply:
 ```
 yarn
 ```
@@ -69,8 +69,6 @@ The script will:
 ### Container
 This container make usage of the [aws cli](https://aws.amazon.com/cli) to download the mp4 video file uploaded in the S3 Bucket, makes some calculations, then it uses [ffmpeg](https://ffmpeg.org/) binary to capture a thumbnail at each 1 second of video and save them into a single file.
 > Refer to the `docker/main.sh` script.
-
-![Output]()
 
 Once the thumbnails file is generate it is uploaded into S3 Bucket.
 
