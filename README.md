@@ -8,7 +8,7 @@
 [![coverage](https://img.shields.io/codecov/c/gh/DiegoVictor/video-thumbnailer?logo=codecov&style=flat-square)](https://codecov.io/gh/DiegoVictor/video-thumbnailer)
 [![MIT License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://raw.githubusercontent.com/DiegoVictor/video-thumbnailer/main/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)<br>
-[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Video%20Thumbnailer&uri=https%3A%2F%2Fraw.githubusercontent.com%2FDiegoVictor%2Fvideo-thumbnailer%2Fmain%2FInsomnia_2022-07-30.json)
+[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Video%20Thumbnailer&uri=https%3A%2F%2Fraw.githubusercontent.com%2FDiegoVictor%2Fvideo-thumbnailer%2Fmain%2FInsomnia_2024-12-05.json)
 
 This application trigger a container with ffmpeg to generate thumbnails when a video is uploaded into a S3 Bucket folder. Output example (compressed file for faster load):
 
