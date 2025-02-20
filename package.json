@@ -7,7 +7,7 @@
     "test": "jest --runInBand"
   },
   "engines": {
-    "node": ">=14.15.0"
+    "node": ">=20.16.0"
   },
   "dependencies": {
     "@aws-sdk/client-ecs": "^3.137.0",
