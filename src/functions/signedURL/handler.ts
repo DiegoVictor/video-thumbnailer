@@ -13,7 +13,7 @@ export const signedUrl: Handler<APIGatewayProxyEvent> = async () => {
     }),
     {
       expiresIn: 900,
-    }
+    },
   );
 
   return {
