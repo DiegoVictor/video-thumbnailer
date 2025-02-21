@@ -27,7 +27,12 @@ const serverlessConfiguration: AWS = {
             Resource: {
               'Fn::Join': [
                 '',
-                [{ 'Fn::GetAtt': ['VideoThumbnailerBucket', 'Arn'] }, '/*'],
+                [
+                  {
+                    'Fn::GetAtt': ['VideoThumbnailerBucket', 'Arn'],
+                  },
+                  '/*',
+                ],
               ],
             },
           },
