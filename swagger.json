@@ -1,0 +1,43 @@
+{
+    "openapi":"3.0.3",
+    "info": {
+      "title":"Video Thumbnailer",
+      "version":"1.0",
+      "license": {
+        "name": "MIT",
+        "url": "https://raw.githubusercontent.com/DiegoVictor/video-thumbnailer/refs/heads/main/LICENSE"
+      }
+    },
+    "servers": [
+      {
+        "url":"http://localhost:3000/dev"
+      }
+    ],
+    "paths": {
+      "/signedUrl": {
+        "get": {
+          "tags": ["Videos"],
+          "responses": {
+            "200": {
+              "description": "Return a Signed URL to upload a mp4 file on S3 Bucket",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "signedUrl": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "example": {
+                    "signedUrl": "https://video-thumbnailer-dev.s3.us-east-1.amazonaws.com/videos/3de5c614-aa01-4611-909b-3a1c88f2a338.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIATWVL4JLDZE4QNAKE%2F20250215%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250215T184718Z&X-Amz-Expires=900&X-Amz-Security-Token=IQoJb3JpZ2luX2VjECMaCXVzLWVhc3QtMSJHMEUCIQCcJy3bzpcgUEFGDPoVxg4%2FPaZv%2Bnh9G49q75NoJtJQCQIgfVP11tunok0IKj47bixOtaWn2x6aFlrLyxer%2F6nY6VcqhgMITBAFGgwyNTQ4MzcyNzk0MzEiDM%2FWEmLnw1xqfg5L%2BCrjAtA8PZi5xMLYmdnb%2B5y%2B0g%2Bs16m7RwVyA%2FjMgiQjWMIM%2FPObiOFc6hf%2FBiOsGBkIIejHXivyxgOh0R%2FwM70rB4slHmzmOFaT%2B0HqW%2FqK6%2BV%2F5OpyKGwAS63B7t2MvGFoexFzfAPnVMfU4T5WLwnGIGJ%2F6N8b%2FP0MOKKMBpWX6enIMfpAU40I%2Fp3sio7pAVKGZBHfJKEYuDAKRfKUXkmdgA4%2BeprnG%2FLoSfZwDtF7%2ByEqQeI5UpRNZow%2B%2BaMa4yVSuJBGwyRchrus2nuMZO7HDEBnecw2IO5QihQl3s6cSTe3lsYmxh9UUq0f2HqEP0np%2BFGjK%2BOmcWtaSIBH%2BlRs2Q2knwlBHyhy9XlMdR38pjYf6KHMH%2FFaKhztnA6rAdd7vmghbWmt%2FHrilCASlGMT%2FVWkoD430vF%2FdzcsO%2BKlzM9ObMGqFriZsIkLPeZiM2NFjl%2FS%2BhmKZothUiwHGRSwPAyZgkQwtsLDvQY6ngFT3IqCvR%2F8vv1V5z%2FZCvuAHa9OanXsH8ZTiPCwxS2iP9Ix%2FQnJa7hwoBgDR3KVV6hd0VrS9dsos3ZnXYG97lLgdbvHJAt53RSIUVa39OHeXKXdx%2BTqTnI%2Fpa%2BWWY%2BKfHi063TES6BPl2taQUmKF31WWX%2FN6BNLqKBZ0rRIRcVDxJ2ESmg7tqauN2YWUmzn7AD%2BMRwDtaRZOkmNOjghJA%3D%3D&X-Amz-Signature=67282ee7cc09c0ffb81397bef6d3c956750fef3cd9cf9ac31cfa167fdeadc5fa&X-Amz-SignedHeaders=host&x-id=PutObject"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
